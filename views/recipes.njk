@@ -1,0 +1,19 @@
+{% extends "layout.njk" %}
+{% block content%}
+    <section class="maisacessadas">
+     <div class="receitas">
+     
+    {% for itens in item %}
+        <div class="receita">
+            <div class="receita-img">
+                <img src="{{itens.imagem}}" alt="">
+
+            </div>
+            <div class="nome-receita">
+                <p>{{itens.nome}}</p>
+                <h3>{{itens.autor}}</h3>
+            </div>
+            
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,23 +1,6 @@
-    <!DOCTYPE html>
-    <html>
-    <head>
-
-        <title>Foodfy</title>
-
-    <link rel="stylesheet" href="styles.css">
-
-    </head>
-    <body>
-    <div class="principal">
-    <header>
-        <div class="links">
-            <a href="/">
-            <img src="/assets/logo.png" alt="" >
-            </a>
-            <a href="/">Sobre</a>
-            <a href="/">Receitas</a> 
-        </div>
-    </header>
+    {% extends "layout.njk" %}
+    
+    {% block content%}
 
     <div class="apresentacao">
         <div class="apresentacao_texto">
@@ -34,83 +17,22 @@
         <h1>Mais acessadas:</h1>
         </div>
      <div class="receitas">
+     
+    {% for itens in item %}
         <div class="receita">
             <div class="receita-img">
-                <img src="assets/burger.png" alt="">
+                <img src="{{itens.imagem}}" alt="">
 
             </div>
             <div class="nome-receita">
-                <p>Triplo bacon burguer</p>
-                <h3>por Jorge Relato</h3>
+                <p>{{itens.nome}}</p>
+                <h3>{{itens.autor}}</h3>
             </div>
             
         </div>
-
-        <div class="receita">
-            <div class="receita-img">
-                <img src="assets/pizza.png" alt="">
-
-            </div>
-            <div class="nome-receita">
-                <p>Pizza 4 estações</p>
-                <h3>por Fabiana Melo</h3>
-            </div>
-            
-        </div>
-
-        <div class="receita">
-            <div class="receita-img">
-                <img src="assets/espaguete.png" alt="">
-
-            </div>
-            <div class="nome-receita">
-                <p>Espaguete ao alho</p>
-                <h3>por Júlia Kinoto</h3>
-            </div>
-        </div>
-
-        <div class="receita">
-            <div class="receita-img">
-                <img src="assets/lasanha.png" alt="">
-
-            </div>
-            <div class="nome-receita">
-                <p>Lasanha mac n' cheese</p>
-                <h3>por Juliano Vieira</h3>
-            </div>
-            
-        </div>
-
-        <div class="receita">
-            <div class="receita-img">
-                <img src="assets/doce.png" alt="">
-
-            </div>
-            <div class="nome-receita">
-                <p>Docinhos pão-do-céu</p>
-                <h3>Por Ricardo Golvea</h3>
-            </div>
-            
-        </div>
-
-        <div class="receita">
-            <div class="receita-img">
-                <img src="assets/asinhas.png" alt="">
-
-            </div>
-            <div class="nome-receita">
-                <p>Asinhas de frango ao babecue</p>
-                <h3>por Vania Steroski</h3>
-            </div>
-            
-        </div>
+    {% endfor %}
+        
+        
      </div>   
     </section>
-
-</div>
-    <footer class="footer">
-        <p>Todos os direitos reservados, receitas Foodfy</p>
-    </footer>
-
-    </body>
-    </html>
+    {% endblock %}

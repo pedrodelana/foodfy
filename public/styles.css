@@ -80,6 +80,22 @@ body{
     position: relative;
 }
 
+.apresentacao.about{
+    height: 350px;
+    
+}
+
+.apresentacao.about p{
+    padding: 20px;
+    text-indent: 5px;
+    text-align: justify;
+}
+
+.apresentacao.about h3{
+    padding-top: 15px;     
+    text-align: center;
+}
+
 .maisacessadas{
     padding: 50px 50px;
     width: 940px;
@@ -124,7 +140,8 @@ body{
     background: #EEEEEE;
     margin-top: 50px;
     width: 100%;
-    
+    bottom: 0px;
+    position: fixed;
 }
 
 .footer p{
