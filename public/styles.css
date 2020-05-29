@@ -38,7 +38,6 @@ body{
     background: #FBDFDB ;
     width: 940px;
     height: 366px;
-    margin: 0 50px;
     border-radius: 30px;
 }
 
@@ -97,7 +96,8 @@ body{
 }
 
 .maisacessadas{
-    padding: 50px 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     width: 940px;
     height: 366px;
     
@@ -140,8 +140,7 @@ body{
     background: #EEEEEE;
     margin-top: 50px;
     width: 100%;
-    bottom: 0px;
-    position: fixed;
+    bottom: 0px;    
 }
 
 .footer p{
@@ -150,9 +149,28 @@ body{
     padding-top: 20px;
 }
 
+
 .principal{
   
   margin: 0 auto;
   max-width: 940px;
-  
+  min-height: 100%;;
+}
+
+/* erro-404*/
+
+.not-found {
+    margin-top: 50px;
+    background: #FBDFDB ;
+    width: 800px;
+    height:400px;
+    border-radius: 130px;
+    position: relative;
+}
+
+.not-found img{
+    position: absolute;
+    
+    width: 800px;
+    border-radius: 130px;
 }

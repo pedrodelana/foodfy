@@ -25,6 +25,10 @@ server.get("/recipes", function(req, res){
     return res.render("recipes", {item:receitas});
 })
 
-server.listen(3000, function(){
+server.use(function(req, res){
+    res.status(404).render("not-found");
+})
+
+server.listen(5000, function(){
     console.log('server is running');
 })
